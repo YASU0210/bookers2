@@ -1,0 +1,100 @@
+<main>
+
+<p id="notice"><%= notice %></p>
+
+<div class='container'>
+
+<div class='row'>
+
+<div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0">
+
+<h2>Sign up</h2>
+
+<%= render "devise/shared/error_messages", resource: resource %>
+
+<%= form_with(model: resource, url: registration_path(resource_name), local: true) do |form| %>
+
+<div class="field">
+
+<%= form.label :name %><br />
+
+<%= form.text_field :name, autofocus: true, class: 'name' %>
+
+</div>
+
+
+
+<div class="field">
+
+<%= form.label :email %><br />
+
+<%= form.email_field :email, autofocus: true, class: 'email' %>
+
+</div>
+
+
+
+<div class="field">
+
+<%= form.label :password %>
+
+<em>(6 characters minimum)</em>
+
+<br />
+
+<%= form.password_field :password, autocomplete: 'off', class: 'password' %>
+
+</div>
+
+
+
+<div class="field">
+
+<%= form.label :password_confirmation %><br />
+
+<%= form.password_field :password_confirmation, autocomplete: 'off', class: 'password_confirm' %>
+
+</div>
+
+
+
+<div class="actions">
+
+<%= form.submit 'Sign up', class: 'btn btn-sm btn-success', data: { disable_with: 'Sign up' } %>
+
+</div>
+
+<% end %>
+
+<%= link_to 'Log in', new_user_session_path %>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<div class='container mt-5'>
+
+<div class='row'>
+
+<div class='mx-auto'>
+
+<p>CopyRight Infratop.inc</p>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+

@@ -1,0 +1,19 @@
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+<h1>User info</h1>
+<%= form_for(@user) do |f| %>
+<%= render 'books/error', model: @user %>
+  <div class="user-name">Name</div>
+    <%= f.text_field :name %>
+  <div class="user-edit-image">Image</div>
+    <%= f.file_field :profile_image %>
+  <div class="form-body">Introduction</div>
+    <%= f.text_area :introduction %><br>
+  <div class="upload">
+    <%= f.submit " Update User" %>
+  </div>
+<% end %>
+    </div>
+  </div>
+</div>
